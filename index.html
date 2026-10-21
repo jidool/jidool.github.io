@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="황성현 포트폴리오 — 교육학 × 데이터. 프로젝트 4건, 경력·수상, 역량.">
+<meta property="og:title" content="황성현 포트폴리오">
+<meta property="og:description" content="“무엇을 위험이라고 부를 것인가”를 데이터로 정의하고 검증하는 사람">
+<title>황성현 포트폴리오</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Gothic+A1:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: single editorial column (max 920px) — sticky section labels on the left at desktop, stacked on phones */
+:root{
+  --bg:#F4F6F9; --surface:#FFFFFF; --surface-2:#EEF2F7; --line:#E1E7EF; --line-2:#C9D2DE;
+  --ink:#0F1826; --ink-2:#465364; --ink-3:#768395;
+  --accent:#1B3358; --accent-2:#2F5A9E; --accent-soft:#E5ECF7; --accent-ink:#17325A;
+  --mark:#5A3A6E; --mark-soft:#EFE8F4;
+  --font-ui:'Plus Jakarta Sans','Gothic A1',system-ui,-apple-system,sans-serif;
+  --font-num:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --shadow:0 1px 2px rgba(20,35,60,.04),0 10px 30px -18px rgba(20,35,60,.22);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0D1218; --surface:#151B23; --surface-2:#1C242E; --line:#28323E; --line-2:#3C4855;
+  --ink:#E7ECF3; --ink-2:#A9B4C2; --ink-3:#7E8995;
+  --accent:#8FB3E6; --accent-2:#9AC0F2; --accent-soft:#18263A; --accent-ink:#C3D8F6;
+  --mark:#C9AEE0; --mark-soft:#2A2133;
+  --shadow:0 1px 2px rgba(0,0,0,.4); color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0D1218; --surface:#151B23; --surface-2:#1C242E; --line:#28323E; --line-2:#3C4855;
+  --ink:#E7ECF3; --ink-2:#A9B4C2; --ink-3:#7E8995;
+  --accent:#8FB3E6; --accent-2:#9AC0F2; --accent-soft:#18263A; --accent-ink:#C3D8F6;
+  --mark:#C9AEE0; --mark-soft:#2A2133;
+  --shadow:0 1px 2px rgba(0,0,0,.4); color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-ui);font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:56px 72px}
+h1,h2,h3,h4{margin:0;color:var(--ink);line-height:1.3;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0;color:var(--ink-2)}
+a{color:var(--accent-2)}
+:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px;border-radius:4px}
+.num{font-family:var(--font-num);font-variant-numeric:tabular-nums}
+
+/* hero */
+.hero{display:grid;gap:22px}
+.kicker{font-size:11.5px;font-weight:700;letter-spacing:.14em;color:var(--mark);text-transform:uppercase}
+.hero h1{font-size:clamp(40px,8vw,68px);font-weight:700;letter-spacing:-.04em;line-height:1}
+.thesis{font-size:clamp(19px,3vw,27px);font-weight:700;line-height:1.42;letter-spacing:-.025em;color:var(--ink);max-width:30ch}
+.thesis em{font-style:normal;color:var(--mark);background:linear-gradient(transparent 62%,var(--mark-soft) 62%)}
+.hero .sub{max-width:62ch;font-size:15px}
+.who{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:16px}
+.who b{color:var(--ink-2);font-weight:600}
+.mail{display:inline-flex;align-items:center;gap:8px}
+.mail span{user-select:all;font-family:var(--font-num);font-size:12.5px;color:var(--ink)}
+.copy{font:inherit;font-size:11.5px;font-weight:700;border:1px solid var(--line-2);background:var(--surface);color:var(--ink-2);border-radius:99px;padding:2px 10px;cursor:pointer}
+.copy:hover{border-color:var(--accent-2);color:var(--accent-2)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.stats>div{background:var(--surface);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
+.stats b{display:block;font-family:var(--font-num);font-size:24px;font-weight:600;color:var(--accent-ink);letter-spacing:-.03em;line-height:1.2}
+.stats small{display:block;font-size:11.5px;color:var(--ink-3);margin-top:2px}
+@media (max-width:620px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* sections */
+.sec{margin-top:60px;border-top:1px solid var(--line-2);padding-top:26px;display:grid;gap:18px}
+.sec>header h2{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--mark);text-transform:uppercase}
+.sec>header p{font-size:13px;color:var(--ink-3);margin-top:6px;max-width:60ch}
+@media (min-width:900px){
+  .sec{grid-template-columns:180px minmax(0,1fr);gap:0 40px;align-items:start}
+  .sec>header{position:sticky;top:calc(env(safe-area-inset-top,0px) + 24px)}
+}
+.sec>div{min-width:0}
+
+/* quick list */
+.quick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.qcard{display:block;text-decoration:none;background:var(--surface);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);border:1px solid transparent;transition:border-color .15s}
+.qcard:hover{border-color:var(--line-2)}
+.qcard .tag{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--ink-3)}
+.qcard b{display:block;font-size:15px;color:var(--ink);margin-top:4px;letter-spacing:-.015em}
+.qcard span.d{display:block;font-size:12.8px;color:var(--ink-2);margin-top:4px;line-height:1.55}
+@media (max-width:600px){.quick{grid-template-columns:1fr}}
+
+/* projects */
+.proj{padding:26px 0 28px;border-bottom:1px solid var(--line);scroll-margin-top:24px}
+.proj:first-child{padding-top:0}
+.proj:last-child{border-bottom:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.badge{font-size:11.5px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--surface-2);color:var(--ink-2)}
+.badge.live{background:var(--accent-soft);color:var(--accent-ink)}
+.proj h3{font-size:clamp(18px,2.6vw,23px);font-weight:700;margin-top:10px}
+.quote{margin-top:12px;font-size:15px;line-height:1.6;color:var(--ink-2);border-left:2px solid var(--mark);padding-left:14px;max-width:58ch}
+.kv{margin-top:14px;display:grid;gap:6px}
+.kv>div{display:grid;grid-template-columns:56px minmax(0,1fr);gap:12px;font-size:13.6px}
+.kv dt{font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--ink-3);padding-top:3px}
+.kv dd{margin:0;color:var(--ink-2)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.btn{font:inherit;display:inline-flex;align-items:center;gap:6px;font-size:12.8px;font-weight:700;text-decoration:none;color:var(--accent-ink);background:var(--accent-soft);border:0;border-radius:99px;padding:7px 14px;cursor:pointer}
+.btn:hover{background:var(--accent-2);color:var(--surface)}
+.btn.ghost{background:transparent;border:1px solid var(--line-2);color:var(--ink-2)}
+.btn.ghost:hover{border-color:var(--accent-2);color:var(--accent-2);background:transparent}
+
+details.more{margin-top:16px;border-top:1px dashed var(--line-2);padding-top:12px}
+details.more>summary{cursor:pointer;list-style:none;font-size:13px;font-weight:700;color:var(--accent-2);display:flex;align-items:center;gap:8px}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::before{content:"+";display:inline-grid;place-items:center;width:18px;height:18px;border-radius:6px;background:var(--surface-2);font-family:var(--font-num);font-size:12px;color:var(--ink-2)}
+details.more[open]>summary::before{content:"\2212";background:var(--accent-soft);color:var(--accent-ink)}
+.blk{margin-top:16px}
+.blk h4{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--ink-3);margin-bottom:6px}
+ul.dots{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+ul.dots li{position:relative;padding-left:15px;font-size:13.6px;color:var(--ink-2)}
+ul.dots li::before{content:"";position:absolute;left:2px;top:.68em;width:5px;height:5px;border-radius:99px;background:var(--accent-2);opacity:.55}
+ol.steps{margin:0;padding-left:22px;font-size:13.6px;color:var(--ink-2);display:grid;gap:5px}
+ol.steps li::marker{font-family:var(--font-num);font-size:12px;color:var(--ink-3)}
+ol.steps b,ul.dots b{color:var(--ink)}
+.callout{margin-top:16px;background:var(--mark-soft);color:var(--ink);border-radius:12px;padding:13px 16px;font-size:13.6px;font-weight:600;line-height:1.6}
+
+/* career + awards */
+.career{display:grid;gap:0}
+.crow{display:grid;grid-template-columns:118px minmax(0,1fr);gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.crow:first-child{padding-top:0}
+.crow .w{font-family:var(--font-num);font-size:12px;color:var(--ink-3);padding-top:2px}
+.crow b{color:var(--ink);font-size:14.5px}
+.crow p{font-size:13.4px;margin-top:3px}
+.minor{font-size:12.8px;color:var(--ink-3);margin-top:12px}
+@media (max-width:560px){.crow{grid-template-columns:1fr;gap:2px}}
+.awards{display:grid;gap:10px;margin-top:28px}
+.aw{background:var(--surface);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow)}
+.aw .top{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+.aw .t{font-size:14.5px;font-weight:700;color:var(--ink)}
+.aw .g{font-size:12px;letter-spacing:.18em;color:var(--mark);white-space:nowrap}
+.aw .g i{font-style:normal;color:var(--line-2)}
+.aw .r{font-size:13px;color:var(--ink-2);margin-top:3px}
+.aw .r b{color:var(--accent-ink)}
+.aw details.more{margin-top:10px}
+.files{display:flex;flex-wrap:wrap;gap:6px}
+.files span{font-size:11.5px;background:var(--surface-2);border-radius:99px;padding:3px 10px;color:var(--ink-2)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.skill{background:var(--surface);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow)}
+.skill h4{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--ink-3);margin-bottom:9px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:12px;background:var(--surface-2);border-radius:99px;padding:4px 11px;color:var(--ink-2)}
+@media (max-width:600px){.skills{grid-template-columns:1fr}}
+.note{font-size:12.4px;color:var(--ink-3);line-height:1.7}
+
+footer{margin-top:64px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+
+/* dashboard dialog */
+dialog.dm{width:min(1180px,96vw);height:min(88vh,920px);padding:0;border:0;border-radius:18px;background:var(--surface);color:var(--ink);box-shadow:0 30px 80px -20px rgba(0,0,0,.5);overflow:hidden}
+dialog.dm::backdrop{background:rgba(6,12,20,.55)}
+.dm-head{display:flex;align-items:center;gap:10px;padding:10px 12px 10px 18px;border-bottom:1px solid var(--line)}
+.dm-head b{font-size:13.5px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dm-body{height:calc(100% - 52px)}
+.dm-body iframe{width:100%;height:100%;border:0;display:block;background:var(--bg)}
+@media (prefers-reduced-motion:reduce){.qcard{transition:none}}
+</style>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <section class="hero" aria-labelledby="nm">
+    <div class="kicker">Portfolio · 교육학 × 데이터</div>
+    <h1 id="nm">황성현</h1>
+    <p class="thesis">“무엇을 <em>위험</em>이라고 부를 것인가”를 데이터로 정의하고, 그 정의가 타당한지 검증하는 사람</p>
+    <p class="sub">발달 지연, 나들이 쾌적도, 산행 위험, 사회적 고립. 네 건의 프로젝트에서 대상만 바꿔 같은 질문을 반복했습니다. 기준을 설계하고, 점수로 만들고, 그 기준이 맞는지 다시 묻는 일입니다.</p>
+    <div class="who">
+      <span><b>숙명여자대학교</b> 교육학부(본전공) · 아동복지학부(복수전공) · 빅데이터전공(학생자율설계)</span>
+      <span>졸업예정 <span class="num">2027.08</span></span>
+      <span class="mail"><span id="em">jidool717@gmail.com</span><button type="button" class="copy" id="cp">복사</button></span>
+    </div>
+    <div class="stats">
+      <div><b>4</b><small>프로젝트 · 연구설계</small></div>
+      <div><b>4</b><small>수상 (5개 대회 중)</small></div>
+      <div><b>3</b><small>연구 · 실무 경력</small></div>
+      <div><b>880</b><small>TOEIC</small></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h1s">
+    <header><h2 id="h1s">한눈에</h2><p>누르면 해당 프로젝트로 이동합니다.</p></header>
+    <div class="quick">
+      <a class="qcard" href="#pf01"><span class="tag">01 · 단독</span><b>영유아 발달 지연 위험군 탐지</b><span class="d">한국아동패널 973명 · 군집·유형 분류와 교사용 웹앱</span></a>
+      <a class="qcard" href="#pf02"><span class="tag">02 · 3인 팀</span><b>아이로 — 가족 나들이 플랫폼</b><span class="d">공공데이터 7종 통합 · 쾌적도 지수와 유모차 동선</span></a>
+      <a class="qcard" href="#pf03"><span class="tag">03 · 산학협력 · 진행 중</span><b>산행안전 AI 통합 시스템</b><span class="d">위험 시나리오 9종의 라벨 정의와 학습 데이터 구축</span></a>
+      <a class="qcard" href="#pf04"><span class="tag">04 · 연구설계</span><b>은둔청년 진입 예측</b><span class="d">관계망 약화를 3개 속성 지수로 측정하는 설계</span></a>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h2s">
+    <header><h2 id="h2s">프로젝트</h2><p>항목마다 ‘자세히’를 펼치면 배경, 판단, 결과, 한계가 나옵니다.</p></header>
+    <div>
+      <article class="proj" id="pf01">
+        <div class="chips"><span class="badge">단독 수행</span><span class="badge">2026-1학기 데이터분석및활용 최종 프로젝트</span></div>
+        <h3>영유아 발달 지연 위험군 탐지 및 유형 분류</h3>
+        <p class="quote">고르지 않은 발달, 파악할 수 없는 현장. 교사는 빠르게 파악해야 하지만 수십 명을 동시에 돌보는 현실에서는 불가능하다.</p>
+        <dl class="kv">
+          <div><dt>데이터</dt><dd>한국아동패널 3차(Denver II)·5차(K-DST) 결합 최종 973명 + AI Hub #108 소아 자유발화 341,790개(3–10세)</dd></div>
+          <div><dt>도구</dt><dd>Python · pandas · scikit-learn · KoNLPy · Streamlit · Plotly</dd></div>
+        </dl>
+        <div class="links">
+          <button type="button" class="btn" data-dash="infant-dashboard.html" data-title="영유아 발달 지연 분석 대시보드">분석 대시보드 보기 ⤢</button>
+          <a class="btn ghost" href="https://infant-dev-detection-bnokdeinzpdsyyhgbb6pbj.streamlit.app/" target="_blank" rel="noopener">웹앱 ↗</a>
+          <a class="btn ghost" href="https://github.com/jidool/infant-dev-detection" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+        <details class="more"><summary>자세히 · 배경, 다섯 가지 판단, 결과, 한계</summary>
+          <div class="blk"><h4>배경</h4><ul class="dots">
+            <li>Bloom: 인간 지적 발달의 약 50%가 만 4세 이전에 완성된다. 이 시기에 놓친 지연은 학령기까지 누적된다</li>
+            <li>국가 발달 선별도구 K-DST는 부모 응답 기반이라 교사가 직접 활용하기 어렵다</li>
+            <li>보건복지부 2023 아동종합실태조사: 취약 환경 아동일수록 발달 점수가 전반적으로 낮다</li>
+            <li>연구 질문: 데이터로 영유아 발달 패턴을 유형화하고, 각 유형에 필요한 교육적 접근을 제안할 수 있는가</li>
+          </ul></div>
+          <div class="blk"><h4>전처리 흐름</h4><p style="font-size:13.6px">2,150명 → 1,770명(Denver II 유효) → 1,018명(K-DST 유효) → 973명(3+5차 결합). 역코딩 규칙(1→2 정상 / 2→1 주의 / 3→0 지연 / 4→NaN), 전 문항 무응답 380명 제거, StandardScaler 정규화</p></div>
+          <div class="blk"><h4>내가 내린 판단</h4><ol class="steps">
+            <li><b>데이터 병합 배제</b>: 수집 시점·방법·대상 아동이 달라 독립 모듈로 배치해 상호 보완</li>
+            <li><b>결측의 정보적 해석</b>: 전 문항 무응답 380명(17.7%)은 검사 시행 기준에 따른 구조적 결측</li>
+            <li><b>K=3 채택</b>: Silhouette 최고값은 K=2였지만 현장 활용성과 Elbow 완만 지점을 근거로</li>
+            <li><b>AUC 0.996 재해석</b>: K-Means 라벨을 같은 특성으로 학습해 과대추정이 불가피하므로 군집 경계 선명도 지표로 규정</li>
+            <li><b>이론 기반 가중치</b>: 언어 30%(Bloom) · 인지 25%(K-DST) · 사회성 25%(Vygotsky ZPD) · 소근육 20%</li>
+          </ol></div>
+          <div class="blk"><h4>결과</h4><ul class="dots">
+            <li>정상 529명(54.4%) · 경계선 236명(24.3%) · 지연의심 208명(21.4%), 4유형으로 세분화</li>
+            <li>발달은 인지-언어(45.8%)와 운동-사회성(29.1%) 두 독립 축으로 진행</li>
+            <li>언어 변수 단독으로 분류의 절반 이상 설명(Feature Importance 0.580), ARI 0.40 → 연속 스펙트럼으로 해석</li>
+            <li>환경변수 통합 시 발달점수 92.9% vs 환경 7.1%, 가구소득이 가장 강한 환경 예측 변수</li>
+            <li>파이프라인: 기술통계 → 상관분석 → PCA → K-Means → 계층적 클러스터링 → Random Forest → NLP(TTR·MLU). 과제 범위(8단계)를 넘어 유형 세분화와 환경변수 통합까지 확장</li>
+          </ul></div>
+          <div class="blk"><h4>산출물: 교사용 진단 웹앱</h4><ul class="dots">
+            <li>전체 대시보드: KPI 4개 · 군집 분포 · 유형 도넛 · 위험도 히스토그램 · 성별 비교</li>
+            <li>교사용 진단 도구: Denver II·K-DST 슬라이더 입력 → 즉시 위험도 게이지</li>
+            <li>아동 개별 조회: 군집·유형·위험도 필터, Claude API로 개입 방향 문장 생성(미연결 시 대체 텍스트)</li>
+          </ul></div>
+          <div class="blk"><h4>한계</h4><ul class="dots">
+            <li>선택적 탈락: 5차 미응답 1,132명(52.7%). 지연 의심군 21.4%는 과소추정 가능</li>
+            <li>천장 효과: K-DST 상한으로 고발달 아동 간 변별력 제한</li>
+            <li>군집 라벨 ≠ 위험도 등급: 지연의심군 208명 중 위험도 ‘지연의심’ 등급은 7명. 상대 비교와 절대 기준이라 함께 사용</li>
+          </ul></div>
+        </details>
+      </article>
+
+      <article class="proj" id="pf02">
+        <div class="chips"><span class="badge">3인 팀(영크크)</span><span class="badge">2026 서울 빅데이터 캠퍼스 아이디어톤</span></div>
+        <h3>아이로 兒路 — 어린이 동반 가족 나들이 플랫폼</h3>
+        <p class="quote">육아 인프라는 있지만, 알 수가 없다.</p>
+        <dl class="kv">
+          <div><dt>데이터</dt><dd>주차장 · 모범음식점 · 서울형 키즈카페 · 유아차 대여 · 지하철 수유실 · 소아과·응급실 · 실시간 도시데이터 + KOPIS API</dd></div>
+          <div><dt>역할</dt><dd>데이터 전처리 · 텍스트 마이닝 · 공간분석 및 라우팅 (주제 고안·데이터 수집·앱 화면 기획은 팀원 담당)</dd></div>
+        </dl>
+        <div class="links">
+          <button type="button" class="btn" data-dash="aro-dashboard.html" data-title="아이로 분석 대시보드">분석 대시보드 보기 ⤢</button>
+          <a class="btn ghost" href="https://mooni-code.github.io/familyfriendly_seoul/" target="_blank" rel="noopener">서비스 데모 ↗</a>
+        </div>
+        <details class="more"><summary>자세히 · 배경, 전처리, 공간분석, 핵심 발견</summary>
+          <div class="blk"><h4>배경</h4><ul class="dots">
+            <li>영아 동반 가족은 외출 준비에 앱 3–5개를 오가며 정보 탐색에만 29분 이상 소요</li>
+            <li>서울 열린데이터광장 5,400여 개 공공데이터 중 육아 데이터는 통합 서비스 없이 분산</li>
+            <li>해결 방향: 추가 예산 없이 기존 공공데이터 통합만으로 체감 효과를 만들 수 있는가</li>
+          </ul></div>
+          <div class="blk"><h4>전처리와 텍스트 마이닝</h4><ul class="dots">
+            <li>인코딩(EUC-KR·CP949·Windows-1252) 자동 감지 후 통일, TM 좌표(EPSG:2097) → WGS84 변환</li>
+            <li>영업 상태·좌표 결측 필터링, KOPIS API 100건 제한을 반복 호출로 우회</li>
+            <li>음식점 109,002개 상호·주소를 노키즈/예스키즈 2레이어로 분류 → 키즈 친화 명시 913개(0.84%, 하한선으로 해석)</li>
+            <li>자치구 간 키즈 친화 명시율 최대 약 10배 격차</li>
+          </ul></div>
+          <div class="blk"><h4>공간분석과 라우팅</h4><ul class="dots">
+            <li>7종 데이터를 EPSG:5179로 통일, 키즈카페·공원·공연장 기준점 반경 500m–1km 버퍼 분석</li>
+            <li>가중치(응급의료 .25 · 음식점 .30 · 공원 .20 · 키즈카페 .25)로 쾌적도 지수 산출 → 평균 13.5점/100점</li>
+            <li>OSMnx 서울 도보 네트워크(노드 163,341 · 엣지 468,342), 계단·급경사·어린이보호구역 기준으로 엣지 가중치 재정의, 변형 다익스트라</li>
+          </ul></div>
+          <div class="callout">최단경로 330m는 계단 때문에 유모차로 갈 수 없다. 실제로 이동 가능한 유일한 경로는 666m. 무엇을 ‘거리’로 정의하느냐에 따라 답이 뒤집힌다.</div>
+        </details>
+      </article>
+
+      <article class="proj" id="pf03">
+        <div class="chips"><span class="badge">3인 팀 · Input 계층 담당</span><span class="badge">산학협력연구</span><span class="badge live">진행 중</span></div>
+        <h3>산행안전 AI 통합 시스템</h3>
+        <p class="quote">라벨을 정한다는 건 시스템 전체의 정답을 정하는 일이다.</p>
+        <dl class="kv">
+          <div><dt>구조</dt><dd>생체·위치·고도 데이터로 9종 위험 시나리오별 위험도를 실시간 판정하는 Input → Model → Dashboard 3계층</dd></div>
+          <div><dt>역할</dt><dd>Input 계층 전체: 데이터 수급부터 라벨 정의·품질관리까지</dd></div>
+          <div><dt>논문</dt><dd><b style="color:var(--ink)">합성 데이터의 학습 투입 판정을 위한 근거 게이트 기법</b><br><span style="font-size:12.8px">An Anchor-Based Evidence Gating for Synthetic Training Data Admission · 전보람, <u>황성현</u>, 박영호 · 제2저자 · 게재 예정</span></dd></div>
+        </dl>
+        <details class="more"><summary>자세히 · 담당 업무, 운영 원칙, 진행 중 성과</summary>
+          <div class="blk"><h4>데이터 수급부터 피처 생성까지</h4><ul class="dots">
+            <li>협력사 데이터 전달 일정을 사전 조율하고, 전체 납품 전 일부를 먼저 확보해 파이프라인 준비</li>
+            <li>원본 직접 열람으로 구조·결측 패턴·이상치 파악, 결측 유형별 보간 방식 직접 선정</li>
+            <li>실측 좌표·고도 통합, 1분 단위 시계열 정렬, 보간 근거 기록</li>
+            <li>실측 표본 부족을 데이터 합성으로 보완하고, 실측 대비 대표성 검증</li>
+            <li>1분 시계열 기반 전용 파이프라인에 학습 모델과 규칙 게이트를 병행</li>
+          </ul></div>
+          <div class="blk"><h4>라벨 정의 및 품질 관리</h4><ul class="dots">
+            <li>9종 시나리오별 위험도 점수 공식·등급 기준 정의, 정박점 세트(위험 지점·사고 클러스터·지정로·능선 기복) 관리</li>
+            <li>코드북 작성 및 버전 관리, 신뢰도 코딩으로 라벨 일관성 검증 후 기준 개정에 반영</li>
+            <li>PostgreSQL 연계, Model·Dashboard 계층용 데이터 규격 문서화</li>
+          </ul></div>
+          <div class="blk"><h4>운영 원칙</h4><ul class="dots">
+            <li>원본 부재 시 생성값으로 자동 폴백: 데이터 결손이 전체 흐름을 멈추지 않게</li>
+            <li>라벨을 바꾸는 변경은 기본값을 끈 채 팀 안건으로 상정</li>
+            <li>데이터가 부족한 시나리오는 학습 대신 규칙 고정: 믿을 수 있는 만큼만 모델 사용</li>
+          </ul></div>
+          <div class="blk"><h4>진행 중 성과</h4><ul class="dots">
+            <li>논문 「합성 데이터의 학습 투입 판정을 위한 근거 게이트 기법」 제2저자(게재 예정): 합성 데이터의 각 축에 근거 등급을 매기고, 기준에 못 미치는 데이터는 학습 투입을 막는 방법. Input 계층의 정박점 근거 등급 체계가 바탕</li>
+            <li>산학 과제 결과물 특허 진행 중(발명자 등재 예정)</li>
+          </ul></div>
+        </details>
+      </article>
+
+      <article class="proj" id="pf04">
+        <div class="chips"><span class="badge">설계 단계 · 분석 미수행</span></div>
+        <h3>은둔청년 진입 예측 연구설계</h3>
+        <p class="quote">은둔에서 어떻게 빠져나올지 묻기 전에, 왜 은둔에 진입하는지를 먼저 물어야 하지 않는가.</p>
+        <dl class="kv">
+          <div><dt>데이터</dt><dd>서울청년패널조사(SYPS) 2023–2025, 만 18–34세 약 3,000명 (팬데믹기 2021–22 제외)</dd></div>
+          <div><dt>가설</dt><dd>관계망이 붕괴된 청년은 경제적 수준과 무관하게 은둔으로 전이될 확률이 높다</dd></div>
+        </dl>
+        <details class="more"><summary>자세히 · 배경, 변수 정의, 5단계 설계</summary>
+          <div class="blk"><h4>배경</h4><ul class="dots">
+            <li>2022년 서울청년패널 기초분석: 서울 청년 34.7%가 우울 증상 의심, 그중 16.7%가 고위험군</li>
+            <li>한 달 중 3주 이상 집 밖에 나가지 않은 물리적 고립 청년 3.4%</li>
+            <li>현행 정책은 이미 은둔한 청년의 발굴·상담에 초점. 사후 회복에서 사전 예방으로의 전환 근거 제시가 목표</li>
+          </ul></div>
+          <div class="blk"><h4>변수</h4><ul class="dots">
+            <li>독립변수, 사회 관계망 지수: ① 관계 만족도 ② 지지망 지수(7개 상황별 도움 가능 여부) ③ 관계 인식 지수(나·타인·사회, 4점 척도)</li>
+            <li>종속변수: 은둔 정도(사회적 단절의 정도와 지속성)</li>
+          </ul></div>
+          <div class="blk"><h4>누적 5단계 설계</h4><ol class="steps">
+            <li>기술통계 및 전처리: 변수의 변별력 선행 점검</li>
+            <li>이분형 로지스틱 회귀: 유의하지 않으면 설계 재수립</li>
+            <li>Cox 비례위험 생존분석: 전이 위험 배수와 개입 골든타임, 우측 절단 처리</li>
+            <li>Random Forest + SHAP: 비선형·상호작용, 개인 수준 기여도</li>
+            <li>층화 5겹 교차검증: 은둔 진입자 2.4% 불균형, AU-PRC·F1·C-index와 부트스트래핑 95% 신뢰구간</li>
+          </ol></div>
+        </details>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h3s">
+    <header><h2 id="h3s">경력과 수상</h2><p>● 개수는 수상 등급(최우수 3 · 우수 2 · 본선 1)입니다.</p></header>
+    <div>
+      <div class="career">
+        <div class="crow"><div class="w">논문 · 게재 예정</div><div><b>합성 데이터의 학습 투입 판정을 위한 근거 게이트 기법</b><p>An Anchor-Based Evidence Gating for Synthetic Training Data Admission. 전보람, 황성현(제2저자), 박영호. 산행안전 AI 산학협력 과제의 일환</p></div></div>
+        <div class="crow"><div class="w">2023.10 –</div><div><b>숙명여대 SSK 사업단 학부연구원</b><p>AI 기반 미래역량 평가와 학습체제 혁신 연구단. 효과크기 코딩, Rayyan 기반 메타분석 문헌 스크리닝, 학부연구생 메타분석 회의 주관</p></div></div>
+        <div class="crow"><div class="w">2025.07 – 08</div><div><b>비상교육 기업실무인턴십</b><p>스마트러닝전략2 CELL. 문제은행·샘퀴즈 QA 및 오류 보고, 출력물 검수, 퀴즈 기획·제작, 홈페이지 분석 리포트. AI 활용 업무 효율화 프로젝트 최우수 팀</p></div></div>
+        <div class="crow"><div class="w">R&amp;D 과제</div><div><b>메타모빌리티</b><p>정부 R&amp;D 과제 제안서 작성. 공고 요구사항 분석, 선행 자료·시장 동향 조사, 제안 논리 구성 및 초안 집필</p></div></div>
+      </div>
+      <p class="minor">그 밖에 유치원 현장실습 · 인권학회 임원 · 교육봉사 · 박람회 서포터즈</p>
+
+      <div class="awards">
+        <div class="aw"><div class="top"><span class="t">2025 미래형 교수학습모델 개발 대회</span><span class="g" aria-label="등급 3">●●●</span></div>
+          <p class="r"><b>학부 최우수상 · 팀장</b> · AI 기반 매체 의사소통 교수학습모델</p>
+          <details class="more"><summary>내용 보기</summary>
+            <div class="blk"><h4>주제</h4><p style="font-size:13.6px">예비교사가 설계하는 미래형 교수·학습 모델: AI를 통합한 수업 모델과 교수·학습 지도안</p></div>
+            <div class="blk"><h4>제안</h4><p style="font-size:13.6px">고등 선택과목 &lt;매체 의사소통&gt;을 재구성하고, AI 통합 수업 모델 ‘BASS 모형’과 단원 지도안을 설계</p></div>
+            <div class="blk"><h4>핵심 내용</h4><ul class="dots">
+              <li>배경: 2022 개정 교육과정의 디지털 역량 강조와 ‘매체’ 영역 신설. 현행 매체 교육과 디지털 네이티브 학습자의 실제 사이의 괴리</li>
+              <li>BASS 모형: 백워드 설계(영속적 이해·성취 목표 재설정) + ASSURE(AI 도구 선정 매뉴얼) + SAMR(수정·재정의 수준의 AI 통합)</li>
+              <li>대단원 지도안 → 1단원 차시별 지도안 → 시연 차시 세부 지도안 → 차시별 학습지까지 작성</li>
+              <li>AI 활용 정도·SAMR 수준·자기평가 루브릭으로 모델 적합성을 스스로 평가</li>
+            </ul></div>
+            <div class="blk"><h4>팀 · 내 역할</h4><p style="font-size:13.6px">교육학부 4인 팀 팀장</p></div>
+            <div class="blk"><h4>산출물</h4><div class="files"><span>보고서</span><span>수업지도안</span><span>보고서·지도안 합본(118쪽)</span></div></div>
+          </details>
+        </div>
+        <div class="aw"><div class="top"><span class="t">2025 AI센터 X HUSS AI 경진대회</span><span class="g" aria-label="등급 2">●●<i>●</i></span></div>
+          <p class="r"><b>우수상 · 팀장</b> · AI 기반 시민 중심 도시개선 플랫폼</p>
+          <details class="more"><summary>내용 보기</summary>
+            <div class="blk"><h4>주제</h4><p style="font-size:13.6px">공공 영역의 사회문제를 발굴하고 AI로 해결하는 실현 가능한 솔루션 제시</p></div>
+            <div class="blk"><h4>제안</h4><p style="font-size:13.6px">AI 도시 컨설턴트 앱 ‘메아리(Meari)’. 시민 신고를 AI가 분류·우선순위화하고, 위험을 미리 예측해 행정에 제안</p></div>
+            <div class="blk"><h4>핵심 내용</h4><ul class="dots">
+              <li>문제: 현행 민원 시스템은 우선순위가 불명확하고 사후 대응이라 생활 불편과 안전 위험을 모두 놓침</li>
+              <li>기능: 사진·위치·음성 신고와 AI 촬영 가이드, 처리 결과 인증·실시간 안내, 참여 포인트 보상, 위험 지도·사전 경고·정책 제언</li>
+              <li>기술 구상: 신고 텍스트 NLP 분류, YOLO 기반 CV 분석, GIS·환경 데이터와 멀티모달 심각도 계산, 위험 히트맵</li>
+              <li>B2G SaaS 수익 모델과 용산구 시범 → 전국 확산 단계별 시행 계획, 기대효과 수치화</li>
+              <li>앞선 대회의 낙선 원인(결과물의 구체성 부족)을 분석해 방향을 다시 잡은 재도전</li>
+            </ul></div>
+            <div class="blk"><h4>팀 · 내 역할</h4><p style="font-size:13.6px">3인 팀 팀장. 일정 관리·회의 주도, 배경 자료조사와 아이디어 기획, 앱 기능 고안과 UI/UX(AI로 구동 화면 제작), PPT 제작, 5분 피칭</p></div>
+            <div class="blk"><h4>산출물</h4><div class="files"><span>참가신청서</span><span>아이디어 피칭 PPT(20쪽)</span><span>시연 영상 3편</span></div></div>
+          </details>
+        </div>
+        <div class="aw"><div class="top"><span class="t">2024 숙명 HUSS 아이디어톤</span><span class="g" aria-label="등급 3">●●●</span></div>
+          <p class="r"><b>최우수</b> · 학교 밖 청소년 사이버폭력 예방 메타버스</p>
+          <details class="more"><summary>내용 보기</summary>
+            <div class="blk"><h4>주제</h4><p style="font-size:13.6px">사이버폭력과 디지털 시민: 디지털 사회 문제에 대한 현실적 해결 아이디어</p></div>
+            <div class="blk"><h4>제안</h4><p style="font-size:13.6px">SPACEBAR. 학교 밖 청소년이 우주 콘셉트의 모바일 메타버스 게임으로 사이버폭력 예방교육을 받는 앱</p></div>
+            <div class="blk"><h4>핵심 내용</h4><ul class="dots">
+              <li>스테이지 3개: ① 사이버 언어폭력(AI 퀴즈로 ‘고운 말’ 모으기) ② 사이버 따돌림(상처 쓰레기 정화) ③ 온라인 그루밍(대화 선택형 분기 엔딩)</li>
+              <li>GPTs로 만든 AI 보조교사 ‘스텔라 가이드’: 바로 답하지 않고 되물어 사고를 확장, 정보 출처 제시</li>
+              <li>Roblox·Minecraft Education 등 기존 플랫폼 활용으로 구현 비용 절감, 꿈드림센터 연계로 보급</li>
+              <li>개념 학습에서 대응 연습까지 하나의 스토리로 이어지는 구성</li>
+            </ul></div>
+            <div class="blk"><h4>팀 · 내 역할</h4><p style="font-size:13.6px">교육학부 4인 팀 팀원</p></div>
+            <div class="blk"><h4>산출물</h4><div class="files"><span>아이디어 제안서</span><span>발표자료</span></div></div>
+          </details>
+        </div>
+        <div class="aw"><div class="top"><span class="t">2024 미래형 교수학습모델 개발 대회</span><span class="g" aria-label="등급 2">●●<i>●</i></span></div>
+          <p class="r"><b>학부 우수상 · 팀장</b> · AI+교과 융합 진로교재</p>
+          <details class="more"><summary>내용 보기</summary>
+            <div class="blk"><h4>주제</h4><p style="font-size:13.6px">AI 기반으로 교과 내용을 융합한 수업지도안 또는 교재 개발</p></div>
+            <div class="blk"><h4>제안</h4><p style="font-size:13.6px">학교 밖 청소년을 위한 ‘AI+교과 융합 진로교재’. 인터랙티브 전자책 형태의 자기주도형 AI 디지털교과서</p></div>
+            <div class="blk"><h4>핵심 내용</h4><ul class="dots">
+              <li>대상: 정규 교육과정 밖에서 진로 교육 지원이 부족한 중학교 연령 학교 밖 청소년</li>
+              <li>2022 개정 ‘진로와 직업’ 교육과정을 따르되 ‘나의 이해 → 직업 세계 탐색 → 진로 설계’ 3단원으로 재구성, 선택 학습 단원 포함</li>
+              <li>NLP·머신러닝·생성형 AI를 결합한 맞춤 학습 경로와 챗봇 ‘모두랑 AI’, 감사일기·퀴즈 등 상호작용 활동</li>
+              <li>사전조사: 2015·2022 개정 교육과정 진로교육 운영 현황, AI 디지털교과서(AIDT) 추진 방향</li>
+            </ul></div>
+            <div class="blk"><h4>팀 · 내 역할</h4><p style="font-size:13.6px">교육학부 3인 팀 팀장</p></div>
+            <div class="blk"><h4>산출물</h4><div class="files"><span>최종보고서(30쪽)</span><span>교과서 1–3단원</span><span>발표자료 26장</span></div></div>
+          </details>
+        </div>
+        <div class="aw"><div class="top"><span class="t">2025 내일을 묻다: 인문사회 X AI 경진대회</span><span class="g" aria-label="등급 1">●<i>●●</i></span></div>
+          <p class="r"><b>예선 통과 · 컨소시엄 선발 · 팀장</b> · 문해력 학습지원 앱</p>
+          <details class="more"><summary>내용 보기</summary>
+            <div class="blk"><h4>주제</h4><p style="font-size:13.6px">공공수요 연계형 AI 경진대회(AI Public-Q): 공공 문제를 발굴하고 수요기관에 AI 해결안 제안</p></div>
+            <div class="blk"><h4>제안</h4><p style="font-size:13.6px">문해력 증진 학습지원 앱 ‘문;득’. 문해력을 진단해 수준·흥미·목적별 맞춤 콘텐츠를 제공하고 비판적 읽기·생산까지 훈련</p></div>
+            <div class="blk"><h4>핵심 내용</h4><ul class="dots">
+              <li>문제: 숏폼 소비·비표준어 일상화로 성인 문해력 하락(PIAAC 2024 한국 249점, OECD 평균 260점). 기존 정책은 비문해자 중심</li>
+              <li>수요기관: 교육부 · 국가평생교육진흥원 · 국가문해교육센터</li>
+              <li>LLM 기반 진단·문제 생성, 학습자 5수준, 스토리라인·일일 퀘스트·포인트 보상 등 게이미피케이션</li>
+              <li>생성형 AI 활용 과정을 프롬프트 목록 20건으로 공개, 본선에서 보너스 게임·챗봇 데모 시연</li>
+            </ul></div>
+            <div class="blk"><h4>팀 · 내 역할</h4><p style="font-size:13.6px">4인 팀 대표. 문해력 정책·통계 조사, 앱 UX/UI 시안, 텍스트 생성형 AI 활용</p></div>
+            <div class="blk"><h4>산출물</h4><div class="files"><span>예선 제안서·보고서</span><span>앱 전체 UI</span><span>프롬프트 목록</span><span>본선 발표자료(61장)</span><span>데모</span></div></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h4s">
+    <header><h2 id="h4s">역량과 자격</h2></header>
+    <div style="display:grid;gap:14px">
+      <div class="skills">
+        <div class="skill"><h4>PYTHON · 분석 도구</h4><div class="tags"><span>pandas</span><span>scikit-learn</span><span>PCA</span><span>K-Means</span><span>계층적 클러스터링</span><span>Random Forest</span><span>KoNLPy</span><span>KoBERT</span><span>GeoPandas</span><span>OSMnx</span></div></div>
+        <div class="skill"><h4>통계 · 방법론</h4><div class="tags"><span>기술통계</span><span>상관분석</span><span>차원축소</span><span>군집분석</span><span>로지스틱 회귀</span><span>생존분석(설계)</span><span>교차검증</span><span>효과크기 코딩</span><span>메타분석</span></div></div>
+        <div class="skill"><h4>데이터 설계</h4><div class="tags"><span>결측 패턴 해석</span><span>역코딩·표준화 규칙</span><span>시계열 윈도잉</span><span>데이터 합성</span><span>라벨·코드북 설계</span><span>신뢰도 코딩</span></div></div>
+        <div class="skill"><h4>배포 · 협업</h4><div class="tags"><span>Streamlit</span><span>Plotly</span><span>Claude API</span><span>Git</span><span>PostgreSQL</span><span>Colab</span><span>Notion</span></div></div>
+      </div>
+      <div class="chips"><span class="badge">TOEIC 880 (2024.02)</span><span class="badge">빅데이터분석기사 필기 응시 예정</span><span class="badge">교육학 2급 정교사 (졸업 시)</span><span class="badge">유치원 2급 정교사 (졸업 시)</span></div>
+      <p class="note">진행 중인 논문 투고와 특허는 완료 표현을 쓰지 않고 진행 상태 그대로 적었습니다.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span>황성현 · <span class="num">jidool717@gmail.com</span></span>
+    <span>데이터 출처: 한국아동패널(육아정책연구소) · AI Hub #108 · 서울 열린데이터광장 · 서울청년패널조사</span>
+  </footer>
+</div>
+
+<dialog class="dm" id="dm" aria-labelledby="dmT">
+  <div class="dm-head"><b id="dmT">대시보드</b><a class="btn ghost" id="dmNew" href="#" target="_blank" rel="noopener">새 탭 ↗</a><button type="button" class="btn ghost" id="dmX">닫기 ✕</button></div>
+  <div class="dm-body"><iframe id="dmF" title="대시보드"></iframe></div>
+</dialog>
+
+<script>
+(function(){
+  var cp=document.getElementById("cp"), em=document.getElementById("em");
+  cp.addEventListener("click",function(){
+    var t=em.textContent;
+    var done=function(){cp.textContent="복사됨";setTimeout(function(){cp.textContent="복사";},1600);};
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(em);var s=getSelection();s.removeAllRanges();s.addRange(r);cp.textContent="선택됨";setTimeout(function(){cp.textContent="복사";},1600);};
+    try{navigator.clipboard.writeText(t).then(done,fallback);}catch(e){fallback();}
+  });
+  var dm=document.getElementById("dm"), f=document.getElementById("dmF"), T=document.getElementById("dmT"), nw=document.getElementById("dmNew");
+  document.querySelectorAll("[data-dash]").forEach(function(b){
+    b.addEventListener("click",function(){
+      var src=b.getAttribute("data-dash"), ttl=b.getAttribute("data-title");
+      T.textContent=ttl; f.title=ttl; nw.href=src;
+      if(f.getAttribute("src")!==src) f.setAttribute("src",src);
+      if(dm.showModal) dm.showModal(); else location.href=src;
+    });
+  });
+  document.getElementById("dmX").addEventListener("click",function(){dm.close();});
+  dm.addEventListener("click",function(e){if(e.target===dm) dm.close();});
+})();
+</script>
+
+</body>
+</html>
